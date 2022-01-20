@@ -1,12 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Example Username/Password') {
-            environment {
-                SERVICE_CREDS = credentials('my-predefined-username-password')
-            }
-        }
-        stage('Example SSH Username with private key') {
+        stage('credentials') {
             environment {
                 SSH_CREDS = credentials('myfile')
             }
