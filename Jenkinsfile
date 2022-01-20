@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    
+    environment {
     stages{
         stage("Env Build Number"){
             steps{
@@ -8,5 +8,6 @@ pipeline{
                 echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"                                                
             }
         }
+    }
     }
 }
