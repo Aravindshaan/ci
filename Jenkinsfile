@@ -1,13 +1,14 @@
-pipeline{
-    agent any
-    environment {
-    stages{
-        stage("Env Build Number"){
-            steps{
-                echo "The build number is ${env.BUILD_NUMBER}"
-                echo "You can also use \${BUILD_NUMBER} -> ${BUILD_NUMBER}"                                                
-            }
-        }
-    }
-    }
+pipeline {
+   agent any
+   environment {
+       DISABLE_AUTH = 'true'                              
+   }
+   stages {
+       stage(“Build”) {
+           steps {
+               echo env.DISABLE_AUTH
+           }
+       }
+   }
 }
+
