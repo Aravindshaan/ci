@@ -17,6 +17,7 @@ pipeline {
             echo "HI ${params.aravind}"
             echo "password ${params.PASSWORD}"
             echo env.DISABLE_AUTH
+            echo "The build number is ${env.BUILD_NUMBER}"
             }
         }
         stage('Build') {
