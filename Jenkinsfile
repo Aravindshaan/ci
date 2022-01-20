@@ -5,6 +5,7 @@ pipeline {
             environment {
                 SERVICE_CREDS = credentials('my-predefined-username-password')
             }
+        }
         stage('Example SSH Username with private key') {
             environment {
                 SSH_CREDS = credentials('myfile')
